@@ -1,5 +1,8 @@
-var mod = require("./mainModule");
+var fs = require('fs');
+console.log('Before File Reading');
 
-var name = new mod();
-name.name('Andy',"Bob");
-name.consoleLog();
+fs.readFile('./file','utf8',function(error,data){
+    console.log(data);
+})
+
+console.log('After File Reading');
