@@ -1,11 +1,5 @@
-var http=require('http');
-var server=http.createServer(engine);
+var mod = require("./mainModule");
 
-server.listen(1337,function(){
-    console.log("success creade!");
-})
-
-function engine(request,response){
-    response.writeHead(200,{"Content-Type":"text/plan"});
-    response.end("Hello"+request.url);
-}
+var name = new mod();
+name.name('Andy',"Bob");
+name.consoleLog();
